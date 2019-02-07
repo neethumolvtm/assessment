@@ -1,0 +1,22 @@
+<form [formGroup]="service.form" class="normal-form" (ngSubmit)="formSubmit()">
+  <!-- <button class="btn btn-primary" (click)="clearTodos()">Delete All</button> -->
+  <mat-grid-list cols="1" rowHeight="100px">
+
+    <mat-grid-tile>
+      <div class="controlers-container">
+        <mat-form-field>
+          <input matInput value={{data.name}} formControlName="todo" placeholder="Todo description*">
+
+          <!-- <mat-error>This field is required</mat-error> -->
+        </mat-form-field>
+
+        <div class="example-button-row">
+
+
+          <button mat-raised-button color="primary" [disabled]="service.form.invalid">Save </button>
+
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>
